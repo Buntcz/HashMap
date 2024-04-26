@@ -93,6 +93,26 @@ class HashMap {
     }
     return keys;
    }
+
+   values() {
+    let values = []
+    for(let i = 0; i< this.buckets.length; i++) {
+        if(this.buckets[i] !== undefined) {
+            values.push(this.buckets[i].value);
+        }
+    }
+     return values;
+   }
+
+   entries() {
+    let entries = [];
+    for(let i = 0; i < this.buckets.length; i++) {
+        if(this.buckets[i] !== undefined) {
+            entries.push(this.buckets[i].key, this.buckets[i].value)
+        }
+    }
+    return entries;
+   }
         
 }
 
