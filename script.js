@@ -108,7 +108,7 @@ class HashMap {
     let entries = [];
     for(let i = 0; i < this.buckets.length; i++) {
         if(this.buckets[i] !== undefined) {
-            entries.push(this.buckets[i].key, this.buckets[i].value)
+            entries.push([this.buckets[i].key, this.buckets[i].value])
         }
     }
     return entries;
